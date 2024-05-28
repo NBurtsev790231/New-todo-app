@@ -4,7 +4,7 @@
 export const Header = () => {
 	return (
 		<div>
-			<h1>My todo list</h1>
+			<h1>Список задач</h1>
 		</div>
 	)
 };
