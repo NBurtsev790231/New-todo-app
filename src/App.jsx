@@ -15,15 +15,26 @@ const addTask = () => {
     status: false,
   };
 
-  let newTask = [...tasks, taskTodo];
+  let newTask = [taskTodo, ...tasks];
   setTasks (newTask);
   setTodo("");
 };
 
 
-const deleteTask = () => {
-
+const deleteTask = (id) => {
+  let deleteTaskId = tasks.filter(e => e.id !== id);
+  setTasks(deleteTaskId);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 const toggleTask = () => {
