@@ -22,34 +22,32 @@ const addTask = () => {
 
 
 const deleteTask = (id) => {
-  let deleteTaskId = tasks.filter(e => e.id !== id);
+  let deleteTaskId = tasks.filter(e => e.id !== id)
   setTasks(deleteTaskId);
 }
 
 
 
 
+//Разобраться с логическими операторами и их применением
+const toggleTask = (id) => {
+  let toggle = tasks.map(e => e.id === id ? {...e, status : !e.status} : {...e});
+  setTasks(toggle);
+};
 
 
 
-
-
-
-
-
-const toggleTask = () => {
-
-}
-
-
-
-
+//Констуркция для сборки страницы
 const taskTodoList = tasks.map(e => <TaskTodo 
    id = {e.id} 
    value = {e.value} 
-   status = {e.status}/>);
+   status = {e.status}
+   deleteTask = {deleteTask}
+   toggleTask = {toggleTask}/>);
 
 
+   
+//Вывод на страницу
   return (
     <div className="App">
       <Header/>
