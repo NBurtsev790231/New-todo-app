@@ -4,8 +4,8 @@ import { InputTodo } from "./Components/InputTodo";
 import { TaskTodo } from "./Components/TaskTodo";
 
 function App() {
-  const [todo, setTodo] = useState ('');
-  const [tasks, setTasks] = useState ([]);
+  const [todo, setTodo] = useState('');
+  const [tasks, setTasks] = useState([]);
 
 
 const addTask = () => {
@@ -17,6 +17,7 @@ const addTask = () => {
 
   let newTask = [...tasks, taskTodo];
   setTasks (newTask);
+  setTodo("");
 };
 
 
@@ -28,6 +29,8 @@ const deleteTask = () => {
 const toggleTask = () => {
 
 }
+
+
 
 
 const taskTodoList = tasks.map(e => <TaskTodo 
