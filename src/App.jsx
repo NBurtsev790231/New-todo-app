@@ -4,8 +4,12 @@ import { InputTodo } from "./Components/InputTodo";
 import { TaskTodo } from "./Components/TaskTodo";
 
 function App() {
+  //Разобрать хуки
   const [todo, setTodo] = useState('');
   const [tasks, setTasks] = useState([]);
+  const [done, setDone] = useState('');
+
+  let copyTasks = tasks;
 
 
 const addTask = () => {
@@ -27,8 +31,6 @@ const deleteTask = (id) => {
 }
 
 
-
-
 //Разобраться с логическими операторами и их применением
 const toggleTask = (id) => {
   let toggle = tasks.map(e => e.id === id ? {...e, status : !e.status} : {...e});
@@ -36,9 +38,30 @@ const toggleTask = (id) => {
 };
 
 
+//Разобраться с конструкцией switch/case
+switch (done) {
+  case "All":
+     copyTasks = tasks
+    break;
+    case "Active":
+     copyTasks = tasks.filter(e => e.status === false)
+    break;
+    case "Completed":
+      copyTasks = tasks.filter(e => e.status === true)
+    break;
+
+  default:
+    break;
+};
+
+
+
+
+
+
 
 //Констуркция для сборки страницы
-const taskTodoList = tasks.map(e => <TaskTodo 
+const taskTodoList = copyTasks.map(e => <TaskTodo 
    id = {e.id} 
    value = {e.value} 
    status = {e.status}
@@ -55,6 +78,9 @@ const taskTodoList = tasks.map(e => <TaskTodo
        addTask = {addTask} todo = {todo} setTodo = {setTodo}
        />
       {taskTodoList}
+      <button onClick={() => setDone("All")}>Все</button>
+      <button onClick={() => setDone("Active")}>Активные</button>
+      <button onClick={() => setDone("Completed")}>Завершенные</button>
     </div>
   );
 };
