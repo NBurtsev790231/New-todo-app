@@ -19,7 +19,7 @@ const addTask = () => {
     status: false,
   };
 
-  let newTask = [taskTodo, ...tasks];
+  let newTask = [...tasks, taskTodo];
   setTasks (newTask);
   setTodo("");
 };
@@ -55,11 +55,6 @@ switch (done) {
 };
 
 
-
-
-
-
-
 //Констуркция для сборки страницы
 const taskTodoList = copyTasks.map(e => <TaskTodo 
    id = {e.id} 
@@ -67,7 +62,6 @@ const taskTodoList = copyTasks.map(e => <TaskTodo
    status = {e.status}
    deleteTask = {deleteTask}
    toggleTask = {toggleTask}/>);
-
 
    
 //Вывод на страницу
