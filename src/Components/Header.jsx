@@ -1,10 +1,10 @@
-
+import { StyleHeader } from "./Style/StyleHeader";
 
 
 export const Header = () => {
 	return (
-		<div>
+		<StyleHeader>
 			<h1>Список задач</h1>
-		</div>
+		</StyleHeader>
 	)
 };
