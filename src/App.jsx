@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./Components/Header";
 import { InputTodo } from "./Components/InputTodo";
 import { TaskTodo } from "./Components/TaskTodo";
+import './Components/Style/StyleHeader';
 
 function App() {
   //Разобрать хуки
