@@ -1,6 +1,25 @@
 import styled from 'styled-components';
 
 export const StyleHeader = styled.div`
-color: aqua;
-font-size: 25px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 700px;
+height: 450px;
+color:  #6a5acd;
+margin: 0px auto;
+padding-top: 30px;
+border: 2px solid #000000;
+ 
+img {
+width: 390px;
+height: 340px;
+border-radius: 15px;
+}
+
+h1 {
+font-size: 40px;
+margin-bottom: 30px;
+}
 `
