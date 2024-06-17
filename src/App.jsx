@@ -3,7 +3,6 @@ import { Header } from "./Components/Header";
 import { InputTodo } from "./Components/InputTodo";
 import { TaskTodo } from "./Components/TaskTodo";
 
-
 function App() {
   //Разобрать хуки
   const [todo, setTodo] = useState('');
