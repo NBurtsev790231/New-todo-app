@@ -6,20 +6,19 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 margin: 0px auto;
-width: 700px;
+width: 600px;
 height: 50px;
-border: 2px solid #000000;
 
 input {
-width: 500px;
+width: 450px;
 height: 35px;
-margin-left: 40px;
+margin-left: 10px;
 border: 2px solid #6a5acd;
 border-radius: 10px;
 }
 
 button {
-	width: 100px;
+	width: 110px;
 	height: 35px; 
 	font-size: 16px;
 	font-weight: 600;
@@ -29,3 +28,4 @@ button {
 	padding: 5px;
 	margin: 10px;
 `
+/*border: 2px solid #000000;*/

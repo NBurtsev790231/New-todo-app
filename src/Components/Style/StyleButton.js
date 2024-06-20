@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyleTask = styled.div`
+export const StyleButton = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;

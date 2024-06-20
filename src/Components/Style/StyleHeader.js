@@ -5,12 +5,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 700px;
-height: 450px;
+width: 600px;
+height: 400px;
 color:  #6a5acd;
 margin: 0px auto;
 padding-top: 30px;
-border: 2px solid #000000;
  
 img {
 width: 390px;
@@ -23,3 +22,4 @@ font-size: 40px;
 margin-bottom: 30px;
 }
 `
+/*border: 2px solid #000000;*/

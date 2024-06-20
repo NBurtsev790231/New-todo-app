@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Header } from "./Components/Header";
 import { InputTodo } from "./Components/InputTodo";
 import { TaskTodo } from "./Components/TaskTodo";
+import { StyleButton } from "./Components/Style/StyleButton";
+import { StyleBody } from "./Components/Style/StyleBody";
 
 function App() {
   //Разобрать хуки
@@ -67,16 +69,18 @@ const taskTodoList = copyTasks.map(e => <TaskTodo
    
 //Вывод на страницу
   return (
-    <div className="App">
+    <StyleBody className="App">
       <Header/>
       <InputTodo 
        addTask = {addTask} todo = {todo} setTodo = {setTodo}
        />
       {taskTodoList}
+      <StyleButton>
       <button onClick={() => setDone("All")}>Все</button>
       <button onClick={() => setDone("Active")}>Активные</button>
-      <button onClick={() => setDone("Completed")}>Завершенные</button>
-    </div>
+      <button onClick={() => setDone("Completed")}>Выполнено</button>
+      </StyleButton>
+    </StyleBody>
   );
 };
 
